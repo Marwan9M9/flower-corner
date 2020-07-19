@@ -1,0 +1,32 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.5),
+    rgba($color-primary-dark, 0.5),
+  ),
+  url(../img/cover.jpeg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90%);
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 15rem;
+    margin: 2rem 4rem;
+  }
+
+  &__text-box {
+    @include absCenter;
+    text-align: center;
+    top: 45%;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+  }
+}
